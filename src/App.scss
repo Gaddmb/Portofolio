@@ -1,0 +1,47 @@
+@use "assets/scss/mixins/responsive";
+
+#root {
+  font-family: Poppins, serif;
+  background-color: rgb(15 23 42/1);
+
+  .wrapper-container {
+    display: flex;
+    max-width: 1280px;
+    min-height: 100vh;
+    margin: auto;
+    gap: 1rem;
+    flex-direction: column;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    @include responsive.responsive("tablet") {
+      flex-direction: row;
+      padding-left: 6rem;
+      padding-right: 6rem;
+      justify-content: space-between;
+    }
+
+    .mouse-halo {
+      display: none;
+
+      @include responsive.responsive("tablet") {
+        display: initial;
+      }
+    }
+
+    header,
+    main {
+      width: 100%;
+
+      @include responsive.responsive("tablet") {
+        width: 50%;
+        padding: 6rem 0;
+      }
+    }
+
+    section {
+      margin-bottom: 9rem;
+      scroll-margin-top: 6rem;
+    }
+  }
+}
