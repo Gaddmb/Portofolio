@@ -19,7 +19,7 @@ const Header = () => {
     });
 
     if (scrollPosition === 0) {
-      setActiveMenuItem(sections[0]);
+      setActiveMenuItem(sections[0].id);
     }
   };
 
